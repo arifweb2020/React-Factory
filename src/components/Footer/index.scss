@@ -1,0 +1,19 @@
+.footer{
+    background-color:black;
+    p{
+        color: grey;
+    }
+    .footer-links {
+        padding-left: 0;
+        margin-bottom: 1rem;
+    }
+    .footer-links li {
+        display: inline-block;
+    }
+    footer a {
+        font-weight: 500;
+        color: #fff;
+        padding-right: .5rem;
+  
+    }
+}
