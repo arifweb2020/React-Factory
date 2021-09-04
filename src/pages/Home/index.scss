@@ -1,0 +1,19 @@
+.homeContainer{
+  --active-btn-color:#3f51b5;
+  --inactive-btn-color:black;
+  --active-btn-text:#fff;
+  --inactive-btn-text:darkorange;
+
+  .activeBtn{
+    background: var(--active-btn-color);
+    color: var(--active-btn-text);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.6);
+  }
+  .inactiveBtn{
+    background-color: var(--inactive-btn-color);
+    color: var(--inactive-btn-text);
+  }
+
+
+    
+}

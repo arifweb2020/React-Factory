@@ -10,8 +10,8 @@ function App() {
     <Router>
       <div className="App">
         <Navbar />
-        <MainView/>
-        <Footer/>
+        <MainView />
+        <Footer />
       </div> 
     </Router>
   );

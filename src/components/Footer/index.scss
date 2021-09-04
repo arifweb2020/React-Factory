@@ -16,4 +16,19 @@
         padding-right: .5rem;
   
     }
+    .topArrow{
+        position: relative;
+        left: 95%;
+        width: 40px;
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .footer{
+        .topArrow{
+            left: 90%;  
+        }   
+    }
+
 }
