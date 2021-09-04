@@ -1,0 +1,132 @@
+.modalBackground {
+  position: fixed;
+  background: black;
+  opacity: 0.5;
+  top: 0px;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+}
+
+.modalContainer {
+  z-index: 10;
+  position: fixed;
+  width: 321px;
+  top: 20vh;
+  left: calc(50vw - 162px);
+  padding-top: 30px;
+  padding-bottom: 25px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+
+  .topImage {
+    justify-content: center;
+    display: flex;
+    position: relative;
+  }
+
+  .crossImage {
+    position: absolute;
+    top: -88px;
+  }
+
+  .modalHeading {
+    font-family: Satoshi-Regular;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+    color: #000000;
+  }
+
+  .modalPara {
+    font-family: Satoshi-Regular;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    color: #707070;
+  }
+
+  .checkmark {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    -ms-transform: rotate(45deg); /* IE 9 */
+    -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+    transform: rotate(45deg);
+  }
+
+  .checkmarkCircle {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    background-color: #fff;
+    border: 1px solid #8080807a;
+    border-radius: 11px;
+    left: 0;
+    top: 0;
+  }
+
+  .checkmarkStem {
+    position: absolute;
+    width: 3px;
+    height: 9px;
+    background-color: grey;
+    left: 11px;
+    top: 6px;
+  }
+
+  .checkmarkTick {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background-color: grey;
+    left: 8px;
+    top: 12px;
+  }
+
+  .modalStepText {
+    font-family: Satoshi-Regular;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: #707070;
+    margin-left: 31px;
+    margin-top: -24px;
+  }
+
+  .stepWrapper {
+    margin-left: 29px;
+  }
+
+  .agreementText {
+    font-family: Satoshi-Regular;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 15px;
+    text-align: center;
+    color: #707070;
+  }
+
+  .deleteAccountBtn {
+    background: linear-gradient(328.9deg, #211a2e 11.67%, #333038 88.32%);
+    box-shadow: 0px 4px 20px rgba(222, 222, 222, 0.6);
+    border-radius: 16px;
+    width: 100%;
+    height: 56px;
+    font-family: Satoshi-Regular;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 14px;
+    text-align: center;
+    color: #ffffff;
+  }
+}
