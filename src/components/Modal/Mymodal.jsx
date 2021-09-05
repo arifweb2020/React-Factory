@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Modal, Button } from 'react-bootstrap'
 
-function Mymodal({ tophedaing, name }) {
+function Mymodal({ tophedaing, name, children }) {
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
@@ -22,6 +22,7 @@ function Mymodal({ tophedaing, name }) {
                 </Modal.Header>
                 <Modal.Body>
                     {name}
+                    {children}
                 </Modal.Body>
                 <Modal.Footer>
                     <Button variant="primary" onClick={handleClose}>Understood</Button>

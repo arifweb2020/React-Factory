@@ -13,13 +13,13 @@ function Navbar() {
                 <div className="collapse navbar-collapse" id="collapsibleNavbar">
                     <ul className="navbar-nav ml-auto">
                         <li className="nav-item">
-                            <Link className="nav-link" to="/about-us">About Us</Link>
+                            <Link className="nav-link" to="/about-us">About</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="#">Link</Link>
+                            <Link className="nav-link" to="/progress">Progress</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="#">Link</Link>
+                            <Link className="nav-link" to="#">Version</Link>
                         </li>
                     </ul>
                 </div>
