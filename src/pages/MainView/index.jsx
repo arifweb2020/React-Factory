@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Home from '../Home';
 import { Route, Switch } from 'react-router-dom'
 import About from '../About';
+import Progress from '../Progress';
 
 function MainView() {
     const [spinner, setSpinner] = useState(true);
@@ -14,7 +15,8 @@ function MainView() {
         <>
             <Switch>
                 <Route exact path="/" component={Home} />
-                <Route path="/about-us" component={About} />
+                <Route path="/about" component={About} />
+                <Route path="/progress" component={Progress} />
             </Switch>
         </>
     );

@@ -1,0 +1,31 @@
+.progressContainer {
+    .bg-primary {
+      background-color: black !important;
+      min-height: 300px;
+      box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.6);
+      -webkit-transition: all 0.3s ease-in-out;
+    }
+    .contentWrapper {
+      padding: 30px;
+      h1,
+      span,p {
+        color: #fff;
+      }
+      span {
+        cursor: pointer;
+      }
+      .btnStep {
+        background-color: darkorange;
+        font-weight: bold;
+      }
+    }
+    .progress {
+      position: relative;
+      top: -1px;
+      border-radius: 0px;
+    }
+    .progress-bar {
+      background-color: darkorange !important;
+    }
+  }
+  
