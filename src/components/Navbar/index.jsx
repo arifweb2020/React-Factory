@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router-dom'
+import { NavLink , Link } from 'react-router-dom';
 import './index.scss'
 
 function Navbar() {
@@ -13,13 +13,16 @@ function Navbar() {
                 <div className="collapse navbar-collapse" id="collapsibleNavbar">
                     <ul className="navbar-nav ml-auto">
                         <li className="nav-item">
-                            <Link className="nav-link" to="/about">About</Link>
+                            <NavLink activeClassName="active" to="/about">About</NavLink>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/progress">Progress</Link>
+                            <NavLink activeClassName="active" to="/progress">Progress</NavLink>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/phone">Phone</Link>
+                            <NavLink activeClassName="active" to="/phone">Phone</NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink activeClassName="active" to="/faq">Faq</NavLink>
                         </li>
                     </ul>
                 </div>

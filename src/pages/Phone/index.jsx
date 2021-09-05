@@ -23,6 +23,7 @@ function Phone() {
             <div className="container">
                 <div className="row">
                     <div className="col-lg-6 offset-lg-3">
+                    <h3 className="mb-4">Enter Your Phone Number</h3>
                         <OtpInput
                             className="inputStyle"
                             value={phoneNumber}
