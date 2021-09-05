@@ -6,7 +6,7 @@ import Puc from './Puc/Puc';
 import College from './College/College';
 import Congrats from './Congrats/Congrats';
 
-function Progress() {
+function Progress(props) {
     const [progressBarValue, setProgressBarValue] = useState(33);
     const [stage, setStage] = useState("school");
 
@@ -21,6 +21,9 @@ function Progress() {
             setStage("clg");
         }, 4000);
     }
+    const proceed = () => {
+        props.history.push("/");
+    }
     const backSchool = () => {
         setProgressBarValue(33)
         setStage("school");
@@ -29,6 +32,7 @@ function Progress() {
         setProgressBarValue(67)
         setStage("puc");
     }
+
     return (
         <div className="progressContainer">
             <div className="jumbotron text-center">
@@ -44,13 +48,12 @@ function Progress() {
                                 {stage === "school" && <School onNext={nextPuc} />}
                                 {stage === "puc" && <Puc onBack={backSchool} nextClg={nextClg} />}
                                 {stage === "congrat" && <Congrats />}
-                                {stage === "clg" && <College backPuc={backPuc} />}
+                                {stage === "clg" && <College backPuc={backPuc} proceed={proceed} />}
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
     );
 }

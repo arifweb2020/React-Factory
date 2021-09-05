@@ -19,7 +19,7 @@ function Navbar() {
                             <Link className="nav-link" to="/progress">Progress</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="#">Version</Link>
+                            <Link className="nav-link" to="/phone">Phone</Link>
                         </li>
                     </ul>
                 </div>
