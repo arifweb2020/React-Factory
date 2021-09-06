@@ -6,6 +6,8 @@ import Progress from '../Progress';
 import NotFound from '../NotFound';
 import Phone from '../Phone';
 import Faq from '../Faq';
+import Pagination from '../Pagination';
+
 
 function MainView() {
     const [spinner, setSpinner] = useState(true);
@@ -22,6 +24,7 @@ function MainView() {
                 <Route path="/progress" component={Progress} />
                 <Route path="/phone" component={Phone} />
                 <Route path="/faq" component={Faq} />
+                <Route path="/pagination" component={Pagination} />
                 <Route component={NotFound} />
             </Switch>
         </>

@@ -22,6 +22,9 @@ function Navbar() {
                             <NavLink activeClassName="active" to="/phone">Phone</NavLink>
                         </li>
                         <li className="nav-item">
+                            <NavLink activeClassName="active" to="/pagination">Pagination</NavLink>
+                        </li>
+                        <li className="nav-item">
                             <NavLink activeClassName="active" to="/faq">Faq</NavLink>
                         </li>
                     </ul>
