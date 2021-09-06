@@ -7,6 +7,8 @@ import NotFound from '../NotFound';
 import Phone from '../Phone';
 import Faq from '../Faq';
 import Pagination from '../Pagination';
+import PrivateRoute from '../PrivateRoute';
+import Login from '../Login';
 
 
 function MainView() {
@@ -22,6 +24,7 @@ function MainView() {
                 <Route exact path="/" component={Home} />
                 <Route path="/about" component={About} />
                 <Route path="/progress" component={Progress} />
+                <PrivateRoute exact path="/login"><Login/></PrivateRoute>
                 <Route path="/phone" component={Phone} />
                 <Route path="/faq" component={Faq} />
                 <Route path="/pagination" component={Pagination} />
