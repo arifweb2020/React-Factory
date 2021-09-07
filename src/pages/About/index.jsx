@@ -4,14 +4,17 @@ import Advantages from './Advantages/Advantages';
 import './index.scss'
 import Prerequisites from './Prerequisites/Prerequisites';
 import Pwa from './Pwa/Pwa';
+import {useParams} from 'react-router-dom';
 
 function About() {
+    let {title} = useParams();
     const [tab, setTab] = useState("advantages");
     return (
         <div className="aboutContainer">
             <div className="jumbotron text-center">
-                <h1>About</h1>
+                <h1>About {title}</h1>
                 <p>Enhance your skills in React and React Native !</p>
+                
             </div>
 
             <div className="container">

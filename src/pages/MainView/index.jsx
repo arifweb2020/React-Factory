@@ -9,6 +9,7 @@ import Faq from '../Faq';
 import Pagination from '../Pagination';
 import PrivateRoute from '../PrivateRoute';
 import Login from '../Login';
+import Rams from '../Params';
 
 
 function MainView() {
@@ -22,12 +23,15 @@ function MainView() {
         <>
             <Switch>
                 <Route exact path="/" component={Home} />
-                <Route path="/about" component={About} />
+                <Route exact path="/about" component={About} />
+                <Route exact path="/about/:title" component={About} />
                 <Route path="/progress" component={Progress} />
                 <PrivateRoute exact path="/login"><Login/></PrivateRoute>
                 <Route path="/phone" component={Phone} />
                 <Route path="/faq" component={Faq} />
                 <Route path="/pagination" component={Pagination} />
+                <Route exact path="/useParams" component={Rams} />
+                <Route exact path="/useParams/:id" component={Rams} />
                 <Route component={NotFound} />
             </Switch>
         </>
