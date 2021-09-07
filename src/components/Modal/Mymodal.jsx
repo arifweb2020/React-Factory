@@ -7,7 +7,7 @@ function Mymodal({ tophedaing, name, children }) {
     const handleShow = () => setShow(true);
     return (
         <>
-            <Button variant="primary" onClick={handleShow}>
+            <Button variant="primary ml-2" onClick={handleShow}>
                 Read More
             </Button>
             <Modal
