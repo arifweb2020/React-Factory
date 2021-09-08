@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink , Link } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import './index.scss'
 
 function Navbar() {
@@ -27,9 +27,26 @@ function Navbar() {
                         <li className="nav-item">
                             <NavLink activeClassName="active" to="/faq">Faq</NavLink>
                         </li>
+                        <li className="nav-item dropdown">
+                            <a activeClassName="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                                Api
+                            </a>
+                            <div className="dropdown-menu">
+                                <Link className="dropdown-item" to="/apicall">Params Api</Link>
+                                <Link className="dropdown-item" to="/tfv">TFV Api</Link>
+                                <Link className="dropdown-item" to="">Link 3</Link>
+                            </div>
+                        </li>
                         <li className="nav-item">
                             <NavLink activeClassName="active" to="/useParams">Params</NavLink>
                         </li>
+                        {/* <li className="nav-item">
+                            <NavLink activeClassName="active" to="/apicall">Api</NavLink>
+                        </li> */}
+
+                        {/* <li className="nav-item">
+                            <NavLink activeClassName="active" to="/instaStories">Insta Stories</NavLink>
+                        </li> */}
                         <li className="nav-item">
                             <NavLink activeClassName="active" to="/login">Login</NavLink>
                         </li>

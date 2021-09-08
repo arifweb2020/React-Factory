@@ -14,7 +14,6 @@ function About() {
             <div className="jumbotron text-center">
                 <h1>About {title}</h1>
                 <p>Enhance your skills in React and React Native !</p>
-                
             </div>
 
             <div className="container">
