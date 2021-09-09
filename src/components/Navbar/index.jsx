@@ -29,12 +29,12 @@ function Navbar() {
                         </li>
                         <li className="nav-item dropdown">
                             <a activeClassName="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                                Api
+                                Category
                             </a>
                             <div className="dropdown-menu">
                                 <Link className="dropdown-item" to="/apicall">Params Api</Link>
                                 <Link className="dropdown-item" to="/tfv">TFV Api</Link>
-                                <Link className="dropdown-item" to="">Link 3</Link>
+                                <Link className="dropdown-item" to="/conditionalResponsive">Device Size</Link>
                             </div>
                         </li>
                         <li className="nav-item">

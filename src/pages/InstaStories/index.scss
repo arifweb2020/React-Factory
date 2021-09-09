@@ -1,0 +1,127 @@
+$progressBarHeight: 8px;
+$progressBarSegmentColor: rgba(0, 0, 0, 0.36);
+$progressionColor: black;
+$maxWidth: 500px;
+
+.welcomeStories {
+  position: relative;
+  height: 100vh;
+  max-width: $maxWidth;
+  margin-left: auto;
+  margin-right: auto;
+
+  & .progressBarBackground {
+    margin-top: 10px;
+    height: 10px;
+  }
+
+  & .progressBarContainer {
+    margin-top: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: auto;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    & .progressBarSegment {
+      padding: 0;
+      width: 30%;
+      height: $progressBarHeight;
+      margin: 0px 2px;
+      background: rgba(0, 0, 0, 0.25);
+      mix-blend-mode: normal;
+      transform: matrix(1, 0, 0, -1, 0, 0);
+      border-radius: calc(#{$progressBarHeight} / 2);
+      background: $progressBarSegmentColor;
+
+      & .progressBarProgression {
+        width: 100%;
+        height: 100%;
+        background: $progressionColor;
+        border-radius: inherit;
+      }
+    }
+  }
+
+  & .welcomeStoriesContent {
+    margin: 20px;
+
+    & .logo {
+      height: 20px;
+      width: 75px;
+    }
+
+    & .pageContent {
+      margin-top: 40px;
+
+      & .userDetails {
+        position: relative;
+
+        & .profilePic {
+          position: absolute;
+          right: 0;
+          top: 0;
+          width: 48px;
+          height: 48px;
+          filter: drop-shadow(0px 4px 20px rgba(222, 222, 222, 0.6));
+          border-radius: 16px;
+        }
+
+        & .welcomeText {
+          font-family: Satoshi-Regular;
+          font-size: 16px;
+          line-height: 24px;
+          text-transform: uppercase;
+          background-image: linear-gradient(#4361ee, #3a0ca3);
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+
+        & .userName {
+          font-family: Ivy Mode;
+          font-size: 32px;
+          line-height: 41px;
+          color: #1c1628;
+        }
+      }
+
+      & .pageTitle {
+        margin-top: 20px;
+        font-family: Satoshi-Regular;
+        font-size: 32px;
+        line-height: 49px;
+        text-transform: uppercase;
+        background-image: linear-gradient(#4361ee, #3a0ca3);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      & .pageText {
+        font-family: Satoshi-Regular;
+        font-size: 22px;
+        line-height: 34px;
+        color: #000000;
+      }
+
+      & .proceedBtn {
+        position: absolute;
+        width: 90%;
+        bottom: 60px;
+        z-index: 1;
+        background: linear-gradient(328.9deg, #211a2e 11.67%, #333038 88.32%);
+        border: 6px solid rgba(207, 210, 222, 0.7);
+        box-shadow: 0px 4px 20px rgba(222, 222, 222, 0.6);
+        border-radius: 16px;
+      }
+    }
+  }
+
+  & .backgroundImage {
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    max-width: $maxWidth;
+  }
+}
