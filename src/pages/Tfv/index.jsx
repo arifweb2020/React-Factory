@@ -27,7 +27,9 @@ function Tfv() {
                                 return (
                                     <div key={items.id}>
                                         <img src={`${tfv_img}${items.image}`} alt="img" width="200" />
-                                        <h1><Link to={`/tfv/${items.id}`}>{items.name}</Link></h1>
+                                        {/* <h1><Link to={`/tfv/${items.name}`}>{items.name}</Link></h1> */}
+                                        <h1><Link to={{ pathname: `/tfv/${items.name}`, state: { userData: items } }}>{items.name}</Link></h1>
+                                        
                                     </div>
                                 )
                             })

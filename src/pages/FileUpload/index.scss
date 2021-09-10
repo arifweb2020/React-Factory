@@ -1,0 +1,29 @@
+.fileUploadSec{
+    .fileUpload {
+        background: #ffffff;
+        border: 1px solid #dce2e4;
+        box-sizing: border-box;
+        backdrop-filter: blur(19px);
+        height: 133px;
+        border-radius: 16px;
+      }
+      .innerFileSection {
+        position: absolute;
+        left: 33%;
+        right: 0%;
+        top: 38%;
+        bottom: 14.77%;
+      }
+      .inputUpload {
+        opacity: 0;
+        z-index: 1;
+        height: 133px;
+        position: relative;
+        left: -105px;
+        top: -79px;
+        width: 318px !important;
+        height: 133px !important;
+        border-radius: 16px;
+        cursor: pointer;
+      }
+}
