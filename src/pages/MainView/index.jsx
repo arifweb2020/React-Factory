@@ -17,6 +17,7 @@ import UserList from '../Api/UserList.jsx/UserList';
 import TfvDetails from '../Tfv/TfvDetails/TfvDetails';
 import conditionalResponsive from '../ConditionalResponsive';
 import FileUpload from '../FileUpload';
+import Amount from '../Amount';
 
 
 
@@ -46,6 +47,7 @@ function MainView() {
                 <Route exact path="/conditionalResponsive" component={conditionalResponsive} />
                 {/* <Route path="/instaStories" component={Insta} /> conditionalResponsive*/}
                 <Route path="/fileUpload" component={FileUpload} />
+                <Route path="/amount" component={Amount} />
                 <Route exact path="/useParams/:id" component={Rams} />
                 <Route component={NotFound} />
             </Switch>

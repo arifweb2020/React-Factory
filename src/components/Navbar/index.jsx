@@ -36,6 +36,7 @@ function Navbar() {
                                 <Link className="dropdown-item" to="/tfv">TFV Api</Link>
                                 <Link className="dropdown-item" to="/conditionalResponsive">Device Size</Link>
                                 <Link className="dropdown-item" to="/fileUpload">File Upload</Link>
+                                <Link className="dropdown-item" to="/amount">Amount</Link>
                             </div>
                         </li>
                         <li className="nav-item">
