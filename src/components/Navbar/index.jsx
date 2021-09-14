@@ -37,6 +37,7 @@ function Navbar() {
                                 <Link className="dropdown-item" to="/conditionalResponsive">Device Size</Link>
                                 <Link className="dropdown-item" to="/fileUpload">File Upload</Link>
                                 <Link className="dropdown-item" to="/amount">Amount</Link>
+                                <Link className="dropdown-item" to="/InfiniteScroll">Scroll</Link>
                             </div>
                         </li>
                         <li className="nav-item">
@@ -45,10 +46,9 @@ function Navbar() {
                         {/* <li className="nav-item">
                             <NavLink activeClassName="active" to="/apicall">Api</NavLink>
                         </li> */}
-
-                        {/* <li className="nav-item">
-                            <NavLink activeClassName="active" to="/instaStories">Insta Stories</NavLink>
-                        </li> */}
+                        <li className="nav-item">
+                            <NavLink activeClassName="active" to="/instaStories">Stories</NavLink>
+                        </li>
                         <li className="nav-item">
                             <NavLink activeClassName="active" to="/login">Login</NavLink>
                         </li>

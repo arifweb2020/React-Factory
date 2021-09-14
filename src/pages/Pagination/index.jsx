@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import Paginate from '../../components/Paginate';
+import {useHistory} from 'react-router-dom'
 
 function Pagination() {
+    let history = useHistory();
     const [items, setItems] = useState([]);
     const [pageCount, setpageCount] = useState(0);
     let limit = 12;
@@ -40,7 +42,7 @@ function Pagination() {
         <div className="paginationContainer">
             <div className="jumbotron text-center">
                 <h1>Pagination</h1>
-                <p>Enhance your skills in React and React Native !</p>
+                <p>Enhance your skills in React and React Native ! <button className="btn btn-md btn-primary" onClick={()=>history.push('/newPagination')}>new pagination</button></p>
             </div>
             <div className="container">
                 <div className="row m-2">

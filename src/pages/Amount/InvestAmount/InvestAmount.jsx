@@ -6,7 +6,7 @@ function InvestAmount({onOpenModal}) {
 
     const enterAmount = () => {
         let amount = investValue;
-        if (amount < 30000 || isNaN(amount)) {
+        if (amount < 50000 || isNaN(amount)) {
             toast.warning("Minimum amount is ₹50,000", {
                 position: "bottom-right",
                 autoClose: 3000,

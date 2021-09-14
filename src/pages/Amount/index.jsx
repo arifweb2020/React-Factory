@@ -18,7 +18,7 @@ function Amount() {
     return (
         <div className="amountContainer">
             <div className="jumbotron text-center">
-                <h1>Enter Amolunt</h1>
+                <h1>Enter Amount</h1>
                 <p>Enhance your skills in React and React Native !</p>
             </div>
             <Modal
