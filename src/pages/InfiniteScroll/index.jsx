@@ -44,33 +44,33 @@ function InfiniteScrolls() {
 
     const styleText = {
         maxWidth: "400px",
-    background: "darkorange",
-    padding: "40px",
-    marginRight: "auto",
-    marginLeft: "auto"
+        background: "darkorange",
+        padding: "40px",
+        marginRight: "auto",
+        marginLeft: "auto"
     }
-    
+
     return (
         <>
-        <div className="jumbotron text-center">
+            <div className="jumbotron text-center">
                 <h1>Infinite Scroll</h1>
                 <p>Enhance your skills in React and React Native !</p>
             </div>
-        <InfiniteScroll
-            dataLength={items.length} //This is important field to render the next data
-            next={fetchData}
-            hasMore={hasMore}
-        // loader={<Loader />}
-        // endMessage={<EndMsg />}
-        >
-            <div className="container">
-                <div className="row m-2">
-                    {items.map((item) => {
-                        return <p key={item.id} style={styleText}>{item.name}</p>;
-                    })}
+            <InfiniteScroll
+                dataLength={items.length} //This is important field to render the next data
+                next={fetchData}
+                hasMore={hasMore}
+            // loader={<Loader />}
+            // endMessage={<EndMsg />}
+            >
+                <div className="container">
+                    <div className="row m-2">
+                        {items.map((item) => {
+                            return <p key={item.id} style={styleText}>{item.name}</p>;
+                        })}
+                    </div>
                 </div>
-            </div>
-        </InfiniteScroll>
+            </InfiniteScroll>
         </>
     );
 }

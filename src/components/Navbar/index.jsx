@@ -38,6 +38,9 @@ function Navbar() {
                                 <Link className="dropdown-item" to="/fileUpload">File Upload</Link>
                                 <Link className="dropdown-item" to="/amount">Amount</Link>
                                 <Link className="dropdown-item" to="/InfiniteScroll">Scroll</Link>
+                                <Link className="dropdown-item" to="/customHook">Custom Hook</Link>
+                                <Link className="dropdown-item" to="/cleanCode">Cleanup Code</Link>
+                                <Link className="dropdown-item" to="/conditionalRendering">Condition Rebdering</Link>
                             </div>
                         </li>
                         <li className="nav-item">

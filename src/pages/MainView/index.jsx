@@ -20,6 +20,9 @@ import FileUpload from '../FileUpload';
 import Amount from '../Amount';
 import InfiniteScroll from '../InfiniteScroll';
 import Paginates from '../Pagination/Paginates/Paginates';
+import CustomHook from '../CustomHook';
+import ConRender from '../ConditionalRendering';
+import CleanUp from '../CleanUp';
 
 function MainView() {
     const [spinner, setSpinner] = useState(true);
@@ -50,6 +53,9 @@ function MainView() {
                 <Route path="/fileUpload" component={FileUpload} />
                 <Route path="/amount" component={Amount} />
                 <Route path="/InfiniteScroll" component={InfiniteScroll} />
+                <Route path="/customHook" component={CustomHook} />
+                <Route path="/cleanCode" component={CleanUp} />
+                <Route path="/conditionalRendering" component={ConRender} />
                 <Route exact path="/useParams/:id" component={Rams} />
                 <Route component={NotFound} />
             </Switch>
