@@ -2,6 +2,17 @@ import React from 'react';
 
 function conditionalResponsive() {
     const isDesktop = window.innerWidth >= 640 ? true : false;
+//     const isDesktop = window.innerWidth >= 668 ? true : false;
+					  
+// 					                       {isDesktop ? (
+//                 this.props.location.pathname === "/home" || this.props.location.pathname === "/portfolio" ? (
+//                       <button className="btn btnLogOut" onClick={this.logout}>Logout</button>) :
+//                       null
+//             ) : (
+//                 this.props.location.pathname === "/home" ? (
+//                       <button className="btn btnLogOut" onClick={this.logout}>Logout</button>) :
+//                       null
+//             )}
     return (
         <div>
             <div className="jumbotron text-center">
