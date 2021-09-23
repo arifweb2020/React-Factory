@@ -14,6 +14,79 @@ function Amount() {
     const lastpage = () => {
         setStage("thankyou")
     }
+    
+//     export const rupeeConverter = (n)=>{
+//     n = n.toString();
+//     n = n.replace("₹", "");
+//     n = n
+//       .split("")
+//       .filter((e) => e !== ",")
+//       .join("");
+//     let currency;
+//     if(window.innerWidth < 640) {
+//       if(n.length > 3 && n.length <= 5) {
+//         n = n.slice(0, n.length - 3)
+//         n += "k"
+//       }
+//       if(n.length > 5 && n.length <= 7) {
+//         n = n.slice(0, n.length - 5)
+//         n += "L"
+//       }
+//       if(n.length > 7) {
+//         n = n.slice(0, n.length - 7)
+//         n += "Cr"
+//       }
+//       currency = "₹" + n;
+//     }
+//     else {
+//       currency = new Intl.NumberFormat("en-IN", {
+//         style: "currency",
+//         currency: "INR",
+//       }).format(n);
+//       currency = currency.split(".")[0];
+//     }
+//     return currency;
+// }
+
+// export const rupeeConverterMobile = (n) => {
+//   n = n.toString();
+//   n = n.replace("₹", "");
+//   n = n
+//   .split("")
+//   .filter((e) => e !== ",")
+//   .join("");
+//   if(n.length > 3 && n.length <= 5) {
+//     n = n.slice(0, n.length - 3)
+//     n += "k"
+//   }
+//   if(n.length > 5 && n.length <= 7) {
+//     n = n.slice(0, n.length - 5)
+//     n += "L"
+//   }
+//   if(n.length > 7) {
+//     n = n.slice(0, n.length - 7)
+//     n += "Cr"
+//   }
+//   n = "₹" + n;
+//   return n;
+// }
+
+// export const rupeeConverterFull = (n) => {
+//   n = n.toString();
+//   n = n.replace("₹", "");
+//   n = n
+//     .split("")
+//     .filter((e) => e !== ",")
+//     .join("");
+//   let currency;
+//   currency = new Intl.NumberFormat("en-IN", {
+//     style: "currency",
+//     currency: "INR",
+//   }).format(n);
+//   currency = currency.split(".")[0];
+//   return currency;
+
+// }
 
     return (
         <div className="amountContainer">
