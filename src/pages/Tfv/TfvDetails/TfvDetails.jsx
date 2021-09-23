@@ -2,6 +2,7 @@ import React from 'react';
 
 function TfvDetails(props) {
     const { name, email, material } = props.location.state.userData
+    localStorage.setItem("ReactFactory" , name)
     return (
         <>
             <div className="jumbotron text-center">

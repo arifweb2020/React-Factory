@@ -13,7 +13,7 @@ function Home() {
     return (
         <div className="homeContainer">
             <div className="jumbotron text-center">
-                <h1>Welcome to React Factory</h1>
+                <h1>Welcome to React Factory : {localStorage.getItem("ReactFactory")}</h1>
                 <p>Enhance your skills in React and React Native !</p>
             </div>
             <div className="container">
