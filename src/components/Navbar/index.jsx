@@ -19,6 +19,9 @@ function Navbar() {
                             <NavLink activeClassName="active" to="/progress">Progress</NavLink>
                         </li>
                         <li className="nav-item">
+                            <NavLink activeClassName="active" to="/movies">Movies</NavLink>
+                        </li>
+                        <li className="nav-item">
                             <NavLink activeClassName="active" to="/phone">Phone</NavLink>
                         </li>
                         <li className="nav-item">
