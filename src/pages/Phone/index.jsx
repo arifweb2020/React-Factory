@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './index.scss';
 import OtpInput from 'react-otp-input';
+import { ToastContainer, toast } from "react-toastify";
+
 function Phone() {
     const [phoneNumber, setPhoneNumber] = useState(0);
     const regex = new RegExp("^[0-9]$");
@@ -14,6 +16,21 @@ function Phone() {
             );
         } else setPhoneNumber(number);
     };
+    const register = () =>{
+        if (phoneNumber[0] === "0") {
+            toast.warning("Enter valid Phone Number", {
+              position: "bottom-right",
+              autoClose: 3000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              progress: undefined,
+              pauseOnHover: false,
+            });
+          }
+          else{
+              alert ('tank you')
+          }
+    }
     return (
         <div className="phoneContainer">
             <div className="jumbotron text-center">
@@ -40,7 +57,7 @@ function Phone() {
                                             <input className="form-check-input" type="checkbox" /> Remember me
                                         </label>
                                     </div>
-                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                    <button type="submit" class="btn btn-primary" onClick={register}>Submit</button>
                                 </div>
                             ) :
                             (
@@ -57,6 +74,14 @@ function Phone() {
                     </div>
                 </div>
             </div>
+            <ToastContainer
+              position="bottom-right"
+              autoClose={3000}
+              hideProgressBar={false}
+              newestOnTop={true}
+              closeOnClick={true}
+              rtl={false}
+            />
         </div>
     );
 }
