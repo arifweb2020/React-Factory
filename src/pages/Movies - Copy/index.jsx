@@ -56,7 +56,7 @@ function Movies() {
         const newFavouriteList = fav.filter((fav) => fav.imdbID !== movie.imdbID);
         setFav(newFavouriteList);
         saveToLocalStorage(newFavouriteList);
-        toast.success("movie deleted successfully", {
+        toast.success("movie delete successfully", {
             position: "bottom-right",
             autoClose: 3000,
             hideProgressBar: false,
@@ -65,22 +65,6 @@ function Movies() {
             pauseOnHover: false,
         });
     };
-
-    const clearData = () => {
-        window.localStorage.clear();
-        setTimeout(() => {
-            window.location.href = '/movies';
-        }, 3000);
-
-        toast.success("your fav list is clear", {
-            position: "bottom-right",
-            autoClose: 3000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            progress: undefined,
-            pauseOnHover: false,
-        });
-    }
 
     return (
         <div className="moviesContainer">
@@ -95,20 +79,20 @@ function Movies() {
                             className='form-control'
                             value={moviesSearch}
                             onChange={(event) => setMoviesSearch(event.target.value)}
-                            placeholder='Type to search...'
+                            placeholder='Search Movies.....'
                         />
                     </div>
                 </div>
                 <div className="row mt-4">
 
                     {movies.map((item, index) => {
-                        return <MovieList key={index} movieslist={item} handleFavouritesClick={addFavouriteMovie} removeFavouriteMovie={removeFavouriteMovie} />
+                        return <MovieList key={index} movieslist={item} handleFavouritesClick={addFavouriteMovie} />
                     })}
 
                 </div>
 
                 <div className="row mt-4">
-                    <h2>Favourite Movie List - <button className="btn btn-md btn-danger" onClick={clearData}>Clear all list</button></h2>
+                    <h2>Favourite Movie List</h2>
                     {fav.map((item, index) => {
                         return <FavList key={index} favlist={item} removeFavouriteMovie={removeFavouriteMovie} />
                     })}
