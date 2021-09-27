@@ -108,7 +108,11 @@ function Movies() {
                 </div>
 
                 <div className="row mt-4">
-                    <h2>Favourite Movie List - <button className="btn btn-md btn-danger" onClick={clearData}>Clear all list</button></h2>
+                    <h2>Favourite Movie List -
+                        {JSON.parse(
+                            localStorage.getItem('favourites-movies')) === null ? null : <button className="btn btn-md btn-danger" onClick={clearData}>
+                            Clear all list</button>}
+                    </h2>
                     {fav.map((item, index) => {
                         return <FavList key={index} favlist={item} removeFavouriteMovie={removeFavouriteMovie} />
                     })}
