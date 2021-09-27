@@ -24,6 +24,7 @@ import CustomHook from '../CustomHook';
 import ConRender from '../ConditionalRendering';
 import CleanUp from '../CleanUp';
 import Movies from '../Movies';
+import FavList from '../Movies/FavList';
 
 function MainView() {
     const [spinner, setSpinner] = useState(true);
@@ -42,6 +43,7 @@ function MainView() {
                 <PrivateRoute exact path="/login"><Login /></PrivateRoute>
                 <Route path="/phone" component={Phone} />
                 <Route path="/movies" component={Movies} />
+                <Route path="/fav-movie-list" component={FavList} />
                 <Route path="/faq" component={Faq} />
                 <Route path="/pagination" component={Pagination} />
                 <Route path="/newPagination" component={Paginates} />

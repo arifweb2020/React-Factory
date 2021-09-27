@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import FavList from './FavList';
 import './index.scss'
 import MovieList from './MovieList';
+import { ToastContainer, toast } from "react-toastify";
 
 function Movies() {
     const [movies, setMovies] = useState([])
@@ -20,6 +22,49 @@ function Movies() {
             setMovies(responseJson.Search);
         }
     }
+
+    useEffect(() => {
+        const movieFavourites = JSON.parse(
+            localStorage.getItem('favourites-movies')
+        );
+
+        if (movieFavourites) {
+            setFav(movieFavourites);
+        }
+    }, []);
+
+    const saveToLocalStorage = (items) => {
+        localStorage.setItem('favourites-movies', JSON.stringify(items));
+    };
+
+    const addFavouriteMovie = (movie) => {
+        const newFavouriteList = [...fav, movie];
+        setFav(newFavouriteList);
+        saveToLocalStorage(newFavouriteList);
+        toast.success("movie added successfully", {
+            position: "bottom-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            progress: undefined,
+            pauseOnHover: false,
+        });
+
+    };
+
+    const removeFavouriteMovie = (movie) => {
+        const newFavouriteList = fav.filter((fav) => fav.imdbID !== movie.imdbID);
+        setFav(newFavouriteList);
+        saveToLocalStorage(newFavouriteList);
+        toast.success("movie delete successfully", {
+            position: "bottom-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            progress: undefined,
+            pauseOnHover: false,
+        });
+    };
 
     return (
         <div className="moviesContainer">
@@ -41,12 +86,27 @@ function Movies() {
                 <div className="row mt-4">
 
                     {movies.map((item, index) => {
-                        return <MovieList key={index} movieslist={item} />
+                        return <MovieList key={index} movieslist={item} handleFavouritesClick={addFavouriteMovie} removeFavouriteMovie={removeFavouriteMovie} />
+                    })}
+
+                </div>
+
+                <div className="row mt-4">
+                    <h2>Favourite Movie List</h2>
+                    {fav.map((item, index) => {
+                        return <FavList key={index} favlist={item} removeFavouriteMovie={removeFavouriteMovie} />
                     })}
 
                 </div>
             </div>
-
+            <ToastContainer
+                position="bottom-right"
+                autoClose={3000}
+                hideProgressBar={false}
+                newestOnTop={true}
+                closeOnClick={true}
+                rtl={false}
+            />
         </div>
     );
 }
