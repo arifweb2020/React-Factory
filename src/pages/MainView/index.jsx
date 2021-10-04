@@ -25,6 +25,9 @@ import ConRender from '../ConditionalRendering';
 import CleanUp from '../CleanUp';
 import Movies from '../Movies';
 import FavList from '../Movies/FavList';
+import SetItem from '../LocalStorage/SetItem';
+import GetItem from '../LocalStorage/GetItem';
+import Students from '../LocalStorage/Students';
 
 function MainView() {
     const [spinner, setSpinner] = useState(true);
@@ -59,6 +62,9 @@ function MainView() {
                 <Route path="/InfiniteScroll" component={InfiniteScroll} />
                 <Route path="/customHook" component={CustomHook} />
                 <Route path="/cleanCode" component={CleanUp} />
+                <Route exact path="/localStorage" component={SetItem} />
+                <Route exact path="/getItem" component={GetItem}/>
+                <Route  path="/localStorage/:students" component={Students}/>
                 <Route path="/conditionalRendering" component={ConRender} />
                 <Route exact path="/useParams/:id" component={Rams} />
                 <Route component={NotFound} />
