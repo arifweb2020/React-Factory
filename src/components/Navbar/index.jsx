@@ -43,7 +43,7 @@ function Navbar() {
                                 <Link className="dropdown-item" to="/InfiniteScroll">Scroll</Link>
                                 <Link className="dropdown-item" to="/customHook">Custom Hook</Link>
                                 <Link className="dropdown-item" to="/cleanCode">Cleanup Code</Link>
-                                <Link className="dropdown-item" to="/conditionalRendering">Condition Rebdering</Link>
+                                <Link className="dropdown-item" to="/conditionalRendering">Condition Rendering</Link>
                                 <Link className="dropdown-item" to="/localStorage">Local Storage</Link>
                             </div>
                         </li>
