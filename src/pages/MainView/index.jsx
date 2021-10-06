@@ -28,6 +28,8 @@ import FavList from '../Movies/FavList';
 import SetItem from '../LocalStorage/SetItem';
 import GetItem from '../LocalStorage/GetItem';
 import Students from '../LocalStorage/Students';
+import Graph from '../Graph';
+import Chart from '../Graph/Chart';
 
 function MainView() {
     const [spinner, setSpinner] = useState(true);
@@ -63,6 +65,8 @@ function MainView() {
                 <Route path="/customHook" component={CustomHook} />
                 <Route path="/cleanCode" component={CleanUp} />
                 <Route exact path="/localStorage" component={SetItem} />
+                <Route exact path="/graph" component={Graph} />
+                <Route exact path="/chart" component={Chart} />
                 <Route exact path="/getItem" component={GetItem}/>
                 <Route  path="/localStorage/:students" component={Students}/>
                 <Route path="/conditionalRendering" component={ConRender} />
