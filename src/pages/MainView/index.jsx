@@ -30,6 +30,7 @@ import GetItem from '../LocalStorage/GetItem';
 import Students from '../LocalStorage/Students';
 import Graph from '../Graph';
 import Chart from '../Graph/Chart';
+import Covid from '../Covid';
 
 function MainView() {
     const [spinner, setSpinner] = useState(true);
@@ -65,6 +66,7 @@ function MainView() {
                 <Route path="/customHook" component={CustomHook} />
                 <Route path="/cleanCode" component={CleanUp} />
                 <Route exact path="/localStorage" component={SetItem} />
+                <Route exact path="/covidIndia" component={Covid} />
                 <Route exact path="/graph" component={Graph} />
                 <Route exact path="/chart" component={Chart} />
                 <Route exact path="/getItem" component={GetItem}/>

@@ -35,7 +35,8 @@ function Navbar() {
                                 Category
                             </a>
                             <div className="dropdown-menu">
-                            <Link className="dropdown-item" to="/graph">Graph</Link>
+                                <Link className="dropdown-item" to="/covidIndia">Covid</Link>
+                                <Link className="dropdown-item" to="/graph">Graph</Link>
                                 <Link className="dropdown-item" to="/apicall">Params Api</Link>
                                 <Link className="dropdown-item" to="/tfv">TFV Api</Link>
                                 <Link className="dropdown-item" to="/conditionalResponsive">Device Size</Link>
