@@ -31,6 +31,8 @@ import Students from '../LocalStorage/Students';
 import Graph from '../Graph';
 import Chart from '../Graph/Chart';
 import Covid from '../Covid';
+import MySkeleton from '../Skeleton/MySkeleton';
+
 
 function MainView() {
     const [spinner, setSpinner] = useState(true);
@@ -70,6 +72,7 @@ function MainView() {
                 <Route exact path="/graph" component={Graph} />
                 <Route exact path="/chart" component={Chart} />
                 <Route exact path="/getItem" component={GetItem}/>
+                <Route path="/skeleton" component={MySkeleton}/>
                 <Route  path="/localStorage/:students" component={Students}/>
                 <Route path="/conditionalRendering" component={ConRender} />
                 <Route exact path="/useParams/:id" component={Rams} />
