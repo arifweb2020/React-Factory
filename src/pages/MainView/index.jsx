@@ -32,6 +32,7 @@ import Graph from '../Graph';
 import Chart from '../Graph/Chart';
 import Covid from '../Covid';
 import MySkeleton from '../Skeleton/MySkeleton';
+import CustomTable from '../Pagination/CustomTable/CustomTable';
 
 
 function MainView() {
@@ -55,6 +56,7 @@ function MainView() {
                 <Route path="/faq" component={Faq} />
                 <Route path="/pagination" component={Pagination} />
                 <Route path="/newPagination" component={Paginates} />
+                <Route path="/customTable" component={CustomTable} />
                 <Route exact path="/useParams" component={Rams} />
                 <Route exact path="/apicall" component={Api} />
                 <Route exact path="/apicall/:myid" component={UserList} />

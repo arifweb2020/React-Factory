@@ -9,13 +9,28 @@ import {useParams} from 'react-router-dom';
 function About() {
     let {title} = useParams();
     const [tab, setTab] = useState("advantages");
+
+    const [open,setOpen]=useState(false)
+
     return (
         <div className="aboutContainer">
             <div className="jumbotron text-center">
                 <h1>About {title}</h1>
                 <p>Enhance your skills in React and React Native !</p>
             </div>
-
+            <div className="container">
+                {
+                    open ? <button onClick={()=>setOpen(!open)}>close</button> : <button onClick={()=>setOpen(!open)}>open</button>
+                }
+                
+                {
+                    open && (
+                        <>
+                        <p>arif</p>
+                        </>
+                    )
+                }
+            </div>
             <div className="container">
                 <div className="row mt-5">
                     <div className="col-lg-7">

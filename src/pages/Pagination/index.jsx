@@ -43,6 +43,7 @@ function Pagination() {
             <div className="jumbotron text-center">
                 <h1>Pagination</h1>
                 <p>Enhance your skills in React and React Native ! <button className="btn btn-md btn-primary" onClick={()=>history.push('/newPagination')}>new pagination</button></p>
+                <p>Custom Table : <button className="btn btn-md btn-primary" onClick={()=>history.push('/customTable')}>Custom Table</button></p>
             </div>
             <div className="container">
                 <div className="row m-2">
