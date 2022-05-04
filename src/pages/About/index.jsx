@@ -19,15 +19,15 @@ function About() {
                 <p>Enhance your skills in React and React Native !</p>
             </div>
             <div className="container">
-                {
-                    open ? <button onClick={()=>setOpen(!open)}>close</button> : <button onClick={()=>setOpen(!open)}>open</button>
-                }
+ <button onClick={()=>setOpen(!open)}>open</button>
+                
                 
                 {
                     open && (
-                        <>
+                        <div className="sideNav">
                         <p>arif</p>
-                        </>
+                        <button onClick={()=>setOpen(!open)}>close</button>
+                        </div>
                     )
                 }
             </div>
