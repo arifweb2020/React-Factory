@@ -4,13 +4,13 @@ import Advantages from './Advantages/Advantages';
 import './index.scss'
 import Prerequisites from './Prerequisites/Prerequisites';
 import Pwa from './Pwa/Pwa';
-import {useParams} from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 function About() {
-    let {title} = useParams();
+    let { title } = useParams();
     const [tab, setTab] = useState("advantages");
 
-    const [open,setOpen]=useState(false)
+    const [open, setOpen] = useState(false)
 
     return (
         <div className="aboutContainer">
@@ -19,14 +19,12 @@ function About() {
                 <p>Enhance your skills in React and React Native !</p>
             </div>
             <div className="container">
- <button onClick={()=>setOpen(!open)}>open</button>
-                
-                
+                <button onClick={() => setOpen(!open)}>open</button>
                 {
                     open && (
                         <div className="sideNav">
-                        <p>arif</p>
-                        <button onClick={()=>setOpen(!open)}>close</button>
+                            <p>arif</p>
+                            <button onClick={() => setOpen(!open)}>close</button>
                         </div>
                     )
                 }
@@ -36,7 +34,7 @@ function About() {
                     <div className="col-lg-7">
                         <ul className="nav nav-tabs">
                             <li className="nav-item">
-                                <button 
+                                <button
                                     className={"btn btn-lg " +
                                         (tab === "advantages"
                                             ? "activeBtn"
@@ -47,36 +45,36 @@ function About() {
                             <li className="nav-item">
                                 <button
                                     className={"btn btn-lg " +
-                                    (tab === "prerequisites"
-                                        ? "activeBtn"
-                                        : "inactiveBtn"
-                                    )}
+                                        (tab === "prerequisites"
+                                            ? "activeBtn"
+                                            : "inactiveBtn"
+                                        )}
                                     onClick={() => setTab("prerequisites")}>Prerequisites</button>
                             </li>
                             <li className="nav-item">
                                 <button
                                     className={"btn btn-lg " +
-                                    (tab === "pwa"
-                                        ? "activeBtn"
-                                        : "inactiveBtn"
-                                    )}
+                                        (tab === "pwa"
+                                            ? "activeBtn"
+                                            : "inactiveBtn"
+                                        )}
                                     onClick={() => setTab("pwa")}>React PWA</button>
                             </li>
                         </ul>
                         <div className="tabWrapper mt-3">
                             {tab === "advantages" && (
                                 <div>
-                                    <Advantages/>
+                                    <Advantages />
                                 </div>
                             )}
                             {tab === "prerequisites" && (
                                 <div>
-                                    <Prerequisites/>
+                                    <Prerequisites />
                                 </div>
                             )}
                             {tab === "pwa" && (
                                 <div>
-                                    <Pwa/>
+                                    <Pwa />
                                 </div>
                             )}
                         </div>
