@@ -75,6 +75,10 @@ nav ul.nav-list li a{
     padding: 1rem;
     background: whitesmoke;
     margin-top: 1rem;
+    position: fixed;
+    top: 345px;
+    left: 0;
+    z-index: 999;
   }
  nav ul.nav-list{
     display: none;
