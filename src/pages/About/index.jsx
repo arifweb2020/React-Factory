@@ -20,7 +20,7 @@ function About() {
     let readings = [
         {
             name: 'Apples',
-            value: 60,
+            value: 34,
             color: '#eb4d4b'
         },
         {
@@ -153,7 +153,12 @@ function About() {
                             }
                         })
                         }
+                        
                     </div>
+                    <div style={{display:'flex',justifyContent:'space-between',color:'red' , width:'100%'}}>
+                            <div>0</div>
+                            <div>10</div>
+                        </div>
                     <div className="legends">
                         {readings.map((item, i) => {
 
