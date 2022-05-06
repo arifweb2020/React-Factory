@@ -27,4 +27,74 @@
     transition: 0.5s; 
     z-index: 10;
   }
+
+  .multicolor-bar {
+    margin-top: 60px;
+    padding-bottom: 60px;
+  }
+  
+  .multicolor-bar .values .value {
+    float: left;
+    text-align: center;
+  }
+  
+  .multicolor-bar .scale .graduation {
+    float: left;
+    text-align: center;
+  }
+  
+  .multicolor-bar .bars  {
+   background-color: grey;
+   height: 10px;
+   position: relative;
+   width: 100%;
+  }
+  .multicolor-bar .bar {
+   // float: left;
+    height: 16px;
+   // position: absolute;
+   // margin-top: -23px;
+    
+  }
+  
+  .multicolor-bar .bars div.bar:first-of-type {
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+  }
+  
+  .multicolor-bar .bars div.bar:last-of-type {
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+  }
+  
+  .multicolor-bar .legends {
+    text-align: center;
+  }
+  
+  
+  .multicolor-bar .legends .legend {
+      display: inline-block;
+      margin: 0 5px;
+      text-align: center;
+  }
+  
+  .multicolor-bar .legends .legend .dot {
+    font-size: 25px;
+    vertical-align: middle;
+  }
+  
+  .multicolor-bar .legends .legend .label {
+    margin-left: 2px;
+    vertical-align: middle;
+  }
+
+
+  .progressBar {
+    display: flex;
+    height: 1rem;
+    overflow: hidden;
+    font-size: .75rem;
+    background-color: #e9ecef;
+    border-radius: 0.25rem;
+}
 }
