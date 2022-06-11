@@ -19,7 +19,7 @@ function Paginates() {
   const getData = async () => {
     const res = await fetch(`https://api.themoviedb.org/3/discover/movie?api_key=b278160cf43c03c878828e19e9e271b0`)
     const data = await res.json();
-    console.log(data.results);
+    console.log("sss" + data.results);
     const finalData = data.results
     setData(finalData)
     setPageCount(Math.ceil(finalData.length / perPage))
@@ -63,7 +63,7 @@ function Paginates() {
         previousLinkClassName={"page-link"}
         nextClassName={"page-item"}
         nextLinkClassName={"page-link"}
-        breakClassName={"page-item"}
+       // breakClassName={"page-item"}
         breakLinkClassName={"page-link"}
         activeClassName={"active"}
       />
