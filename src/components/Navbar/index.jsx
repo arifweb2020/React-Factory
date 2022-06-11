@@ -48,6 +48,7 @@ function Navbar() {
                                 <Link className="dropdown-item" to="/conditionalRendering">Condition Rendering</Link>
                                 <Link className="dropdown-item" to="/localStorage">Local Storage</Link>
                                 <Link className="dropdown-item" to="/skeleton">Skeleton</Link>
+                                <Link className="dropdown-item" to="/search">Search</Link>
                             </div>
                         </li>
                         <li className="nav-item">

@@ -31,6 +31,7 @@ import Students from '../LocalStorage/Students';
 import Graph from '../Graph';
 import Chart from '../Graph/Chart';
 import Covid from '../Covid';
+import Search from '../Search'
 import MySkeleton from '../Skeleton/MySkeleton';
 import CustomTable from '../Pagination/CustomTable/CustomTable';
 
@@ -74,6 +75,7 @@ function MainView() {
                 <Route exact path="/graph" component={Graph} />
                 <Route exact path="/chart" component={Chart} />
                 <Route exact path="/getItem" component={GetItem}/>
+                <Route exact path="/search" component={Search}/>
                 <Route path="/skeleton" component={MySkeleton}/>
                 <Route  path="/localStorage/:students" component={Students}/>
                 <Route path="/conditionalRendering" component={ConRender} />
