@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import Table from '../../components/Table';
-import ReactPaginate from 'react-paginate';
+import ReactPaginate  from 'react-paginate';
+
 
 function Search(props) {
     const [data, setData] = useState([])
     const [query, setQuery] = useState("")
-    const [offset, setOffset] = useState(0);
-    const [perPage] = useState(10);
     const [pageCount, setPageCount] = useState(0)
-
+    const [perPage] = useState(10);
+    const [offset, setOffset] = useState(0);
     useEffect(() => {
         const getData = async () => {
             const res = await fetch("https://jsonplaceholder.typicode.com/albums")
@@ -21,20 +20,7 @@ function Search(props) {
 
         }
 
-    }, [query, perPage])
-
-    console.log(query)
-    console.log(data.filter((val) => val.title.toLowerCase().includes("quidem")))
-
-    const keys = ["title", "id", "userId"]
-
-    // console.log(data[0]["title"])
-    const search = (mydata) => {
-        return mydata.filter((item) =>
-            //item.title.toString().toLowerCase().includes(query) || item.id.toString().toLowerCase().includes(query) || item.userId.toString().toLowerCase().includes(query)
-            keys.some((key) => item[key].toString().toLowerCase().includes(query))
-        ).slice(offset, offset + perPage)
-    }
+    }, [perPage, query])
 
     const handlePageClick = (e) => {
         const selectedPage = e.selected;
@@ -44,9 +30,13 @@ function Search(props) {
     return (
         <div style={{ margin: "0 auto", maxWidth: "70%", marginTop: "30px" }}>
             <h1>Search</h1>
-            <input type="text" placeholder='search...' onChange={(e) => setQuery(e.target.value)} />
+            <input type="text" placeholder='search..' onChange={(e) => setQuery(e.target.value)} />
 
-            <Table list={search(data)} />
+            {
+                data.filter((ss) => ss.title.toLowerCase().includes(query)).slice(offset, offset + perPage).map((ele, i) => {
+                    return <p key={i}>{ele.userId}</p>
+                })
+            }
 
             <ReactPaginate
                 previousLabel={"prev"}
@@ -64,7 +54,7 @@ function Search(props) {
                 previousLinkClassName={"page-link"}
                 nextClassName={"page-item"}
                 nextLinkClassName={"page-link"}
-                //  breakClassName={"page-item"}
+                // breakClassName={"page-item"}
                 breakLinkClassName={"page-link"}
                 activeClassName={"active"}
             />
@@ -73,4 +63,3 @@ function Search(props) {
 }
 
 export default Search;
-

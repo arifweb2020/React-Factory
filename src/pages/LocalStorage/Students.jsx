@@ -12,6 +12,9 @@ function Students(props) {
         }
         getData();
     }, []);
+
+    const ss = JSON.parse(localStorage.getItem('students-list'))
+    console.log("sss " + ss[0].name)
     return (
         <>
             <div className="jumbotron text-center">
